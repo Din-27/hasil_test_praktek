@@ -12,34 +12,34 @@ function App() {
         console.log(`---------${alpha[y]}--------- \n`)
       }
       if (index % 3 === 0) {
-        console.log(`---------${alpha[y]}-${x}-${alpha[y]}--------- \n`)
+        console.log(`---------${alpha[y]}-${alpha[x]}-${alpha[y]}--------- \n`)
       }
       if (index % 5 === 0) {
-        console.log(`---------${alpha[y]}-${x}-${x}-${x}-${alpha[y]}--------- \n`)
+        console.log(`---------${alpha[y]}-${alpha[x]}-${alpha[x]}-${alpha[x]}-${alpha[y]}--------- \n`)
       }
       if (index % 7 === 0) {
-        console.log(`---------${alpha[y]}-${x}-${x}-${x}-${x}-${x}-${alpha[y]}--------- \n`)
+        console.log(`---------${alpha[y]}-${alpha[x]}-${alpha[x]}-${alpha[x]}-${alpha[x]}-${alpha[x]}-${alpha[y]}--------- \n`)
       }
       if (index % 9 === 0) {
-        console.log(`---------${alpha[y]}-${x}-${x}-${x}-${x}-${x}-${x}-${x}-${alpha[y]}--------- \n`)
+        console.log(`---------${alpha[y]}-${alpha[x]}-${alpha[x]}-${alpha[x]}-${alpha[x]}-${alpha[x]}-${alpha[x]}-${alpha[x]}-${alpha[y]}--------- \n`)
       }
       if (index % 11 === 0) {
-        console.log(`---------${alpha[y]}-${x}-${x}-${x}-${x}-${x}-${x}-${x}-${x}-${x}-${alpha[y]}--------- \n`)
+        console.log(`---------${alpha[y]}-${alpha[x]}-${alpha[x]}-${alpha[x]}-${alpha[x]}-${alpha[x]}-${alpha[x]}-${alpha[x]}-${alpha[x]}-${alpha[x]}-${alpha[y]}--------- \n`)
       }
       if (index % 9 === 0) {
-        console.log(`---------${alpha[y]}-${x}-${x}-${x}-${x}-${x}-${x}-${x}-${alpha[y]}--------- \n`)
+        console.log(`---------${alpha[y]}-${alpha[x]}-${alpha[x]}-${alpha[x]}-${alpha[x]}-${alpha[x]}-${alpha[x]}-${alpha[x]}-${alpha[y]}--------- \n`)
       }
       if (index % 7 === 0) {
-        console.log(`---------${alpha[y]}-${x}-${x}-${x}-${x}-${x}-${alpha[y]}--------- \n`)
+        console.log(`---------${alpha[y]}-${alpha[x]}-${alpha[x]}-${alpha[x]}-${alpha[x]}-${alpha[x]}-${alpha[y]}--------- \n`)
       }
       if (index % 5 === 0) {
-        console.log(`---------${alpha[y]}-${x}-${x}-${x}-${alpha[y]}--------- \n`)
+        console.log(`---------${alpha[y]}-${alpha[x]}-${alpha[x]}-${alpha[x]}-${alpha[y]}--------- \n`)
       }
       if (index % 5 === 0) {
-        console.log(`---------${alpha[y]}-${x}-${x}-${x}-${alpha[y]}--------- \n`)
+        console.log(`---------${alpha[y]}-${alpha[x]}-${alpha[x]}-${alpha[x]}-${alpha[y]}--------- \n`)
       }
       if (index % 3 === 0) {
-        console.log(`---------${alpha[y]}-${x}-${alpha[y]}--------- \n`)
+        console.log(`---------${alpha[y]}-${alpha[x]}-${alpha[y]}--------- \n`)
       }
       if (index % y === 0) {
         console.log(`---------${alpha[y]}--------- \n`)
@@ -56,8 +56,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          { }<code>src/App.js</code> and save to reload.
+        <p><code>src/App.js</code> and save to reload.
         </p>
       </header>
     </div>
