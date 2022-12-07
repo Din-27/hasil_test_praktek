@@ -1,63 +1,52 @@
 import logo from './logo.svg';
 import './App.css';
 import { useEffect } from 'react';
-import { useCallback } from 'react';
-import { memo } from 'react';
 
 function App() {
-  let alpha = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
-  const patternRangoli = useCallback((x, y) => {
-    for (let index = 0; index < y; index++) {
-      if (index % parseFloat(y) === 0) {
-        console.log(`---------${alpha[y]}--------- \n`)
+  const alphabet = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
+  const patternRangoli = (x, y) => {
+    var n
+    n = parseInt(y);
+    for (let i = n; i > 0; i--) {
+      for (let j = 1; j <= i - 1; j++) {
+        document.write('&nbsp&nbsp');
       }
-      if (index % 3 === 0) {
-        console.log(`---------${alpha[y]}-${alpha[x]}-${alpha[y]}--------- \n`)
+
+      for (let y = 1; y <= n - i + 1; y++) {
+        document.write(`-${alphabet[x]}`.toLocaleLowerCase());
       }
-      if (index % 5 === 0) {
-        console.log(`---------${alpha[y]}-${alpha[x]}-${alpha[x]}-${alpha[x]}-${alpha[y]}--------- \n`)
+
+      for (let l = 1; l <= n - i; l++) {
+        document.write(`-${alphabet[x]}`.toLocaleLowerCase());
       }
-      if (index % 7 === 0) {
-        console.log(`---------${alpha[y]}-${alpha[x]}-${alpha[x]}-${alpha[x]}-${alpha[x]}-${alpha[x]}-${alpha[y]}--------- \n`)
-      }
-      if (index % 9 === 0) {
-        console.log(`---------${alpha[y]}-${alpha[x]}-${alpha[x]}-${alpha[x]}-${alpha[x]}-${alpha[x]}-${alpha[x]}-${alpha[x]}-${alpha[y]}--------- \n`)
-      }
-      if (index % 11 === 0) {
-        console.log(`---------${alpha[y]}-${alpha[x]}-${alpha[x]}-${alpha[x]}-${alpha[x]}-${alpha[x]}-${alpha[x]}-${alpha[x]}-${alpha[x]}-${alpha[x]}-${alpha[y]}--------- \n`)
-      }
-      if (index % 9 === 0) {
-        console.log(`---------${alpha[y]}-${alpha[x]}-${alpha[x]}-${alpha[x]}-${alpha[x]}-${alpha[x]}-${alpha[x]}-${alpha[x]}-${alpha[y]}--------- \n`)
-      }
-      if (index % 7 === 0) {
-        console.log(`---------${alpha[y]}-${alpha[x]}-${alpha[x]}-${alpha[x]}-${alpha[x]}-${alpha[x]}-${alpha[y]}--------- \n`)
-      }
-      if (index % 5 === 0) {
-        console.log(`---------${alpha[y]}-${alpha[x]}-${alpha[x]}-${alpha[x]}-${alpha[y]}--------- \n`)
-      }
-      if (index % 5 === 0) {
-        console.log(`---------${alpha[y]}-${alpha[x]}-${alpha[x]}-${alpha[x]}-${alpha[y]}--------- \n`)
-      }
-      if (index % 3 === 0) {
-        console.log(`---------${alpha[y]}-${alpha[x]}-${alpha[y]}--------- \n`)
-      }
-      if (index % y === 0) {
-        console.log(`---------${alpha[y]}--------- \n`)
-      }
-      return index
+      document.write('<br>:');
     }
-  }, [alpha])
+
+    for (let i = 1; i <= n; i++)
+    {
+      for (let j = 1; j <= i; j++) {
+        document.write('&nbsp&nbsp');
+      }
+
+      for (let y = 1; y <= n - i; y++) {
+        document.write(`-${alphabet[x]}`.toLocaleLowerCase());
+      }
+
+      for (let l = 1; l < n - i; l++) {
+        document.write(`-${alphabet[x]}`.toLocaleLowerCase());
+      }
+      document.write('<br>');
+    }
+  }
 
   useEffect(() => {
-    patternRangoli('j', 5)
+    patternRangoli(3, 10)
   })
 
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p><code>src/App.js</code> and save to reload.
-        </p>
+        <div></div>
       </header>
     </div>
   );
